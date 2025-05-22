@@ -11,13 +11,9 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "product": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::product.product"
-    },
     "quantity": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "subtotal": {
       "type": "decimal"
@@ -25,10 +21,13 @@
     "taxesSubtotal": {
       "type": "decimal"
     },
-    "order": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::order.order"
+    "product_id": {
+      "type": "integer",
+      "required": true
+    },
+    "order_id": {
+      "type": "integer",
+      "required": true
     }
   }
 }

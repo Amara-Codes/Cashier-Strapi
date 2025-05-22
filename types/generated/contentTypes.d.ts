@@ -422,10 +422,10 @@ export interface ApiOrderRowOrderRow extends Struct.CollectionTypeSchema {
       'api::order-row.order-row'
     > &
       Schema.Attribute.Private;
-    order: Schema.Attribute.Relation<'oneToOne', 'api::order.order'>;
-    product: Schema.Attribute.Relation<'oneToOne', 'api::product.product'>;
+    order_id: Schema.Attribute.Integer & Schema.Attribute.Required;
+    product_id: Schema.Attribute.Integer & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    quantity: Schema.Attribute.Integer;
+    quantity: Schema.Attribute.Integer & Schema.Attribute.Required;
     subtotal: Schema.Attribute.Decimal;
     taxesSubtotal: Schema.Attribute.Decimal;
     updatedAt: Schema.Attribute.DateTime;

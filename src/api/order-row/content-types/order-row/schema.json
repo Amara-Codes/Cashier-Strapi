@@ -28,6 +28,15 @@
     "order_id": {
       "type": "integer",
       "required": true
+    },
+    "orderRowStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "served",
+        "paid",
+        "cancelled"
+      ]
     }
   }
 }

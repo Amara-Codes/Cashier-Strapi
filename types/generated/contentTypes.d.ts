@@ -423,6 +423,9 @@ export interface ApiOrderRowOrderRow extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     order_id: Schema.Attribute.Integer & Schema.Attribute.Required;
+    orderRowStatus: Schema.Attribute.Enumeration<
+      ['pending', 'served', 'paid', 'cancelled']
+    >;
     product_id: Schema.Attribute.Integer & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     quantity: Schema.Attribute.Integer & Schema.Attribute.Required;

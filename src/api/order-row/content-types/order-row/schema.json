@@ -37,6 +37,9 @@
         "paid",
         "cancelled"
       ]
+    },
+    "category_id": {
+      "type": "integer"
     }
   }
 }

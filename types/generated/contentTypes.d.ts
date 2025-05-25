@@ -413,6 +413,7 @@ export interface ApiOrderRowOrderRow extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    category_id: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

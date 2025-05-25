@@ -21,14 +21,6 @@
     "taxesSubtotal": {
       "type": "decimal"
     },
-    "product_id": {
-      "type": "integer",
-      "required": true
-    },
-    "order_id": {
-      "type": "integer",
-      "required": true
-    },
     "orderRowStatus": {
       "type": "enumeration",
       "enum": [
@@ -38,8 +30,14 @@
         "cancelled"
       ]
     },
-    "category_id": {
-      "type": "integer"
+    "order_doc_id": {
+      "type": "string"
+    },
+    "category_doc_id": {
+      "type": "string"
+    },
+    "product_doc_id": {
+      "type": "string"
     }
   }
 }

@@ -413,7 +413,7 @@ export interface ApiOrderRowOrderRow extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    category_id: Schema.Attribute.Integer;
+    category_doc_id: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -423,11 +423,11 @@ export interface ApiOrderRowOrderRow extends Struct.CollectionTypeSchema {
       'api::order-row.order-row'
     > &
       Schema.Attribute.Private;
-    order_id: Schema.Attribute.Integer & Schema.Attribute.Required;
+    order_doc_id: Schema.Attribute.String;
     orderRowStatus: Schema.Attribute.Enumeration<
       ['pending', 'served', 'paid', 'cancelled']
     >;
-    product_id: Schema.Attribute.Integer & Schema.Attribute.Required;
+    product_doc_id: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     quantity: Schema.Attribute.Integer & Schema.Attribute.Required;
     subtotal: Schema.Attribute.Decimal;

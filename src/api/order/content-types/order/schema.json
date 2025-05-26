@@ -53,6 +53,18 @@
     "serial": {
       "type": "customField",
       "customField": "plugin::strapi-advanced-uuid.uuid"
+    },
+    "paidAmount": {
+      "type": "string"
+    },
+    "appliedDiscount": {
+      "type": "string"
+    },
+    "paymentDaytime": {
+      "type": "datetime"
+    },
+    "paymentMethod": {
+      "type": "string"
     }
   }
 }

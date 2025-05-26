@@ -450,6 +450,7 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    appliedDiscount: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -467,6 +468,9 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     orderStatus: Schema.Attribute.Enumeration<
       ['pending', 'served', 'paid', 'cancelled']
     >;
+    paidAmount: Schema.Attribute.String;
+    paymentDaytime: Schema.Attribute.DateTime;
+    paymentMethod: Schema.Attribute.String;
     percentualDiscount: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     serial: Schema.Attribute.UID &

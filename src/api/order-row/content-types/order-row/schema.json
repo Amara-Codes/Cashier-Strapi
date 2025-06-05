@@ -27,7 +27,8 @@
         "pending",
         "served",
         "paid",
-        "cancelled"
+        "cancelled",
+        "merged"
       ]
     },
     "order_doc_id": {

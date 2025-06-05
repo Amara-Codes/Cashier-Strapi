@@ -38,6 +38,15 @@
     },
     "product_doc_id": {
       "type": "string"
+    },
+    "createdByUserName": {
+      "type": "string"
+    },
+    "processedByUserName": {
+      "type": "string"
+    },
+    "updatedByUserName": {
+      "type": "string"
     }
   }
 }

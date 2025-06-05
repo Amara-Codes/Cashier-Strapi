@@ -417,6 +417,7 @@ export interface ApiOrderRowOrderRow extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    createdByUserName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -427,6 +428,7 @@ export interface ApiOrderRowOrderRow extends Struct.CollectionTypeSchema {
     orderRowStatus: Schema.Attribute.Enumeration<
       ['pending', 'served', 'paid', 'cancelled']
     >;
+    processedByUserName: Schema.Attribute.String;
     product_doc_id: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     quantity: Schema.Attribute.Integer & Schema.Attribute.Required;
@@ -435,6 +437,7 @@ export interface ApiOrderRowOrderRow extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    updatedByUserName: Schema.Attribute.String;
   };
 }
 
@@ -454,24 +457,28 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    createdByUserName: Schema.Attribute.String;
     customerName: Schema.Attribute.String & Schema.Attribute.Required;
     finalTotal: Schema.Attribute.Decimal;
     fixedDiscount: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::order.order'> &
       Schema.Attribute.Private;
+    mergedToOderDocId: Schema.Attribute.String;
+    mergedWithOrderDocId: Schema.Attribute.String;
     notes: Schema.Attribute.Text;
     order_rows: Schema.Attribute.Relation<
       'oneToMany',
       'api::order-row.order-row'
     >;
     orderStatus: Schema.Attribute.Enumeration<
-      ['pending', 'served', 'paid', 'cancelled']
+      ['pending', 'served', 'paid', 'cancelled', 'merged']
     >;
     paidAmount: Schema.Attribute.String;
     paymentDaytime: Schema.Attribute.DateTime;
     paymentMethod: Schema.Attribute.String;
     percentualDiscount: Schema.Attribute.Integer;
+    processedByUserName: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     serial: Schema.Attribute.UID &
       Schema.Attribute.CustomField<'plugin::strapi-advanced-uuid.uuid'>;

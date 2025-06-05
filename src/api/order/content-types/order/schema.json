@@ -24,7 +24,8 @@
         "pending",
         "served",
         "paid",
-        "cancelled"
+        "cancelled",
+        "merged"
       ]
     },
     "total": {
@@ -64,6 +65,18 @@
       "type": "datetime"
     },
     "paymentMethod": {
+      "type": "string"
+    },
+    "processedByUserName": {
+      "type": "string"
+    },
+    "createdByUserName": {
+      "type": "string"
+    },
+    "mergedToOderDocId": {
+      "type": "string"
+    },
+    "mergedWithOrderDocId": {
       "type": "string"
     }
   }

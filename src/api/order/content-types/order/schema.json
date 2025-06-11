@@ -73,7 +73,7 @@
     "createdByUserName": {
       "type": "string"
     },
-    "mergedToOderDocId": {
+    "mergedToOrderDocId": {
       "type": "string"
     },
     "mergedWithOrderDocId": {

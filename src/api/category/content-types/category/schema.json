@@ -25,6 +25,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::product.product"
+    },
+    "isFood": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
